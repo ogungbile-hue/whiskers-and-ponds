@@ -6,6 +6,7 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true,
+    // Serve index.html for any unknown path (SPA routing)
     historyApiFallback: true,
   },
 });
