@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import AquaticBackground from './components/common/AquaticBackground';
-import NotificationBar from './components/common/NotificationBar';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import HeroSection from './components/customer/HeroSection';
@@ -94,7 +93,6 @@ export default function App() {
       <AquaticBackground />
 
       <div className="relative z-10 flex flex-col min-h-screen">
-        <NotificationBar />
         <Header
           isAdminView={isAdminView}
           onGoAdmin={goToAdmin}
