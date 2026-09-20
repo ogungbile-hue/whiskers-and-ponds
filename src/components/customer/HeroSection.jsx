@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Clock, Flame, ArrowRight, Sparkles, Fish } from 'lucide-react';
 
-export default function HeroSection({ onOrder }) {
+export default function HeroSection({ onOrder, onViewProducts }) {
   return (
     <section className="relative z-10 flex flex-col justify-center px-4 sm:px-8 md:px-10 py-8 sm:py-14 min-h-[calc(100vh-100px)]">
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -72,13 +72,7 @@ export default function HeroSection({ onOrder }) {
               </button>
 
               <button
-                onClick={() => {
-                  const el = document.getElementById('product-selection');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  else {
-                    window.scrollTo({ top: 600, behavior: 'smooth' });
-                  }
-                }}
+                onClick={onViewProducts}
                 className="btn-outline px-6 py-3.5 text-sm sm:text-base flex items-center justify-center gap-2 hover:bg-white/10 text-center"
               >
                 <span>View Products</span>
